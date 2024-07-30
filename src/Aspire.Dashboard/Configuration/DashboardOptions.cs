@@ -125,6 +125,7 @@ public sealed class OtlpOptions
 // Don't set values after validating/parsing options.
 public sealed class FrontendOptions
 {
+    public string BaseHref { get; set; } = "/";
     private List<Uri>? _parsedEndpointUrls;
     private byte[]? _browserTokenBytes;
 

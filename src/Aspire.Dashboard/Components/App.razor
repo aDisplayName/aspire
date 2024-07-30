@@ -1,10 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@using Aspire.Dashboard.Configuration
+@using Microsoft.Extensions.Options
+@inject IOptions<DashboardOptions> dashboardOptions
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <base href="/" />
+    <base href="@(dashboardOptions?.Value?.Frontend.BaseHref??"/")" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css" />
     <link rel="stylesheet" href="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css" />
